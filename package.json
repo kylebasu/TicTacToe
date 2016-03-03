@@ -1,0 +1,30 @@
+{
+  "name": "tictactoe",
+  "version": "1.0.0",
+  "description": "a simple tictactoe game",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kylebasu/TicTacToe.git"
+  },
+  "keywords": [
+    "tic",
+    "tac",
+    "toe"
+  ],
+  "author": "Kyle Basu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kylebasu/TicTacToe/issues"
+  },
+  "homepage": "https://github.com/kylebasu/TicTacToe#readme",
+  "dependencies": {
+    "babel-preset-react": "^6.5.0",
+    "babelify": "^7.2.0",
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7"
+  }
+}
