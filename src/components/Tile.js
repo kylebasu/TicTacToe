@@ -41,5 +41,5 @@ var Tile = React.createClass({
 	}
 
 })
-
-ReactDOM.render(<Tile />, document.body)
+//module.exports = Tile;
+// ReactDOM.render(<Tile />, document.body)
