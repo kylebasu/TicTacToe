@@ -34,7 +34,7 @@ class GameBoard extends React.Component {
 		var holder = [topRow, middleRow, bottomRow, rightColumn, middleColumn, leftColumn, rightDiagonal, leftDiagonal]
 		//checks if any row has won with 'x'
 		if(holder.indexOf('xxx') !== -1){
-			that.setState({winCondition: [true, 'X Won!']});
+			that.setState({winCondition: [true, 'x']});
 		}
 		//checks if any row has won with 'o'
 		else if(holder.indexOf('ooo') !== -1){
