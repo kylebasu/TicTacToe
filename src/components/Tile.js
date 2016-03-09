@@ -1,5 +1,7 @@
 import React from 'react';
 
+
+//used as a dictionary to change integers to strings in order to properly CSS
 var cssConverter = {
 		0: 'zero',
 		1: 'one',
@@ -12,16 +14,21 @@ var cssConverter = {
 		8: 'eight'
 	}
 class Tile extends React.Component{
+	// ES6 method of getting inital state
 	constructor(props, context) {
 		super(props, context);
 
 		this.state = {}
 	}
 
+	//calls click method that was passed as props from Gameboard
 	handleClick () {
 		this.props.tileClick(this.props.position, this.props.character)
 	}
 
+
+	//necessary method in order to render jsx
+	//displays different Tile depending on this.props.status, this.props.status should indicate whether the Tile is unclicked or if it is which player has clicked it
 	render () {
 		console.log(this.props)
 		if(this.props.status === null){		
@@ -45,23 +52,6 @@ class Tile extends React.Component{
 			)
 		}
 	}
-
-	// render: function() {
-	// 	if(!this.state.clicked){
-	// 		return(
-	// 			<h1 onClick={this.handleClick}>
-	// 				Hello World
-	// 			</h1>
-	// 		);
-	// 	}else{
-	// 		return(
-	// 			<div onKeyDown={this.handleKeyPress}>
-	// 				a test: {this.keyPressed}
-	// 			</div>
-	// 		)
-	// 	}
-	// }
-
 }
 
 export default Tile
