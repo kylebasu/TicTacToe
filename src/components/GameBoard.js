@@ -19,7 +19,9 @@ class GameBoard extends React.Component {
 
 	// Function to be run after each click in order to determine if a player won
 	checkWinner () {
+		//used to preserve context
 		var that = this;
+		//simple abstraction of that.state.board into a variable
 		var board = that.state.board
 		//Sums up each possible win condition in order to see if any are satisfied
 		var topRow = board[0] + board [1] + board[2]
@@ -42,7 +44,8 @@ class GameBoard extends React.Component {
 		}
 		//checks if the board has been filled without any winner in order to announce a tie
 		else if(board.indexOf(null) === -1){
-			that.setState({winCondition:[true, 'Its a Tie!']})
+			// ^ here we use board instead of holder because we want to make sure the BOARD has no nulls, not the concated rows/colums/diagonals
+			that.setState({winCondition:[true, 'tie']})
 		}
 	}
 
@@ -70,6 +73,8 @@ class GameBoard extends React.Component {
 					<img src='../../styles/images/Hydra.png' />
 					WON!
 				</div>)
+		}else if(this.state.winCondition[0] && this.state.winCondition[1] === 'tie'){
+			return(<div id='win'> Its a Tie! </div>)
 		}else{
 			return(
 				<div>

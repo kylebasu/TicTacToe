@@ -30,7 +30,6 @@ class Tile extends React.Component{
 	//necessary method in order to render jsx
 	//displays different Tile depending on this.props.status, this.props.status should indicate whether the Tile is unclicked or if it is which player has clicked it
 	render () {
-		console.log(this.props)
 		if(this.props.status === null){		
 			return(
 				<div className={'tile ' + cssConverter[this.props.position]} onClick={this.handleClick.bind(this)}>
